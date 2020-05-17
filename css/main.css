@@ -72,14 +72,6 @@ body {
   grid-area: hero;
 }
 
-.header-container .side-top {
-  grid-area: side-top;
-}
-
-.header-container .side-bottom {
-  grid-area: side-bottom;
-}
-
 .para-container {
   display: -ms-grid;
   display: grid;
@@ -349,15 +341,38 @@ body::-webkit-scrollbar-button {
   display: none;
 }
 
-.hover-animation {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+.nav-hover a:before,
+.nav-hover a:after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
 }
 
-.hover-animation:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-  padding: 24px 10px;
+.nav-hover a:before {
+  margin-right: 10px;
+  content: '-';
+  -webkit-transform: translate(20px);
+  transform: translate(20px);
+}
+
+.nav-hover a:after {
+  margin-left: 10px;
+  content: '-';
+  -webkit-transform: translate(-20px);
+  transform: translate(-20px);
+}
+
+.nav-hover a:hover:before,
+.nav-hover a:hover:after,
+.nav-hover a:focus:before,
+.nav-hover a:focus:after {
+  opacity: 1;
+  -webkit-transform: translate(0px);
+  transform: translate(0px);
 }
 
 .hover-image {

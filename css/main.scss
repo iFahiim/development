@@ -56,18 +56,12 @@ body {
 
 .header-container {
     display: grid;
-    grid-template-rows:  auto;
+    grid-template-rows: auto;
     grid-template-areas: 
         "hero";
 
     .hero {
         grid-area: hero;
-    }
-    .side-top {
-        grid-area: side-top;
-    }
-    .side-bottom {
-        grid-area: side-bottom;
     }
 }
 
@@ -327,13 +321,39 @@ body::-webkit-scrollbar-button {
 
 // NAV HOVER EFFECT
 
-.hover-animation {
-    transition: 0.4s;
+  .nav-hover a:before,
+  .nav-hover a:after {
+      display: inline-block;
+      opacity: 0;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+      -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+      transition: transform 0.3s, opacity 0.2s;
   }
-  .hover-animation:hover {
-    background-color: $dark-color;
-    color: $light-color;
-    padding: 24px 10px;
+  
+  .nav-hover a:before {
+      margin-right: 10px;
+      content: '-';
+      -webkit-transform: translate(20px);
+      -moz-transform: translate(20px);
+      transform: translate(20px);
+  }
+  
+  .nav-hover a:after {
+      margin-left: 10px;
+      content: '-';
+      -webkit-transform: translate(-20px);
+      -moz-transform: translate(-20px);
+      transform: translate(-20px);
+  }
+  
+  .nav-hover a:hover:before,
+  .nav-hover a:hover:after,
+  .nav-hover a:focus:before,
+  .nav-hover a:focus:after {
+      opacity: 1;
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      transform: translate(0px);
   }
 
 
