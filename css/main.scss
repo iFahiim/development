@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+$primary-color: #E1E1E1;
+$dark-color: #000000;
+$light-color: #FFFFFF;
+$scroll-color: #babac0;
+
+body, html {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat';
+    //display: none;
+}
+
+// GRID
+
+.header-grid-container {
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo navigation";
+    
+        .logo {
+        grid-area: logo;
+    }
+    nav {
+        grid-area: navigation;
+    }
+}
+
+
+
+.main-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas: 
+        "header"
+        "row-paragraph"
+        "row-benefits";
+    
+    .header {
+    grid-area: header;
+    }
+    .row-paragraph {
+        grid-area: row-paragraph;
+    }
+    .row-benefits {
+        grid-area: row-benefits;
+    }
+}
+
+.header-container {
+    display: grid;
+    grid-template-rows:  auto;
+    grid-template-areas: 
+        "hero";
+
+    .hero {
+        grid-area: hero;
+    }
+    .side-top {
+        grid-area: side-top;
+    }
+    .side-bottom {
+        grid-area: side-bottom;
+    }
+}
+
+.para-container {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas: 
+        "attack"
+        "image1"
+        "image2"
+        "image3";
+
+    .attack {
+        grid-area: attack;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .image1 {
+        grid-area: image1;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .image2 {
+        grid-area: image2;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .image3 {
+        grid-area: image3;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  auto 1fr;
+    grid-template-areas: 
+        "first-row-footer"
+        "second-row-footer";
+
+    .first-row-footer {
+        grid-area: first-row-footer;
+        text-align: center;
+        background: darken($color: white, $amount: 3)
+    }
+    .second-row-footer {
+        grid-area: second-row-footer;
+        text-align: center;
+        background: $primary-color;
+    }
+}
+
+
+// RESPONSIVE
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+
+    .para-container {
+        display: grid;
+        margin: 5em;
+        grid-template-columns: 50% auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "paragraph graphic";
+
+        .paragraph {
+            grid-area: paragraph;
+        }
+        .graphic {
+            grid-area: graphic;
+        }
+    }
+
+    .benefits-container {
+        display: grid;
+        margin: 5em;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr auto;
+        grid-gap: 2em;
+        grid-template-areas: 
+            ". attack ."
+            "image1 image2 image3";
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+
+// HEADER
+
+    .header, .row-benefits  {
+
+            h1, h2, .button {
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 1.44rem;
+                a {
+                    text-decoration: none;
+                    color: $dark-color;
+                }
+            }
+
+            .button {
+                text-decoration: none;
+                color: $dark-color;
+                font-weight: bold;
+                background: transparent;
+                background-position: 3em;
+                padding: 1em;
+                border: 3px solid $dark-color;
+                display: inline-block;
+                margin-top: 3em;
+            }
+
+            .animate-header {
+                overflow: hidden;
+            }
+        }
+
+        .top-bar {
+            position: absolute;
+            padding: 1em;
+            z-index: 20;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 2em);
+        
+            a {
+                text-decoration: none;
+                color: $dark-color;
+            }
+        
+            a.logo {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 17px;
+            }
+        
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+        
+                li {
+                    margin: 0 1em;
+                }
+            }
+        }
+
+        .hero {
+            background: url('../images/hero.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+
+            p {
+                width: 70%;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        .side-bottom {
+            background: $primary-color;
+        }
+
+        .side-top, .side-bottom {
+            font-size: 0.9rem;
+            line-height: 1.6em;
+        }
+
+        .grid-title {
+            padding: 25em 0 0 2em;
+        }
+
+
+// MAIN
+
+.img-size {
+    width: 100%;
+}
+
+
+// FOOTER 
+
+.icons, .copyright {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.icon {
+    margin: 1em;
+    img {
+        width: 30px;
+    }
+}
+
+.copyright li {
+    font-size: 0.7rem;
+}
+
+
+// SCROLL BAR
+
+body::-webkit-scrollbar {
+    background-color: $light-color;
+    width:16px
+}
+
+body::-webkit-scrollbar-track {
+    background-color: $light-color
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $scroll-color;
+    border-radius:16px;
+    border:4px solid $light-color
+}
+
+body::-webkit-scrollbar-button {
+    display:none
+}
+
+
+// HOVER EFFECTS
+
+.hover-animation {
+    transition: 0.4s;
+  }
+  .hover-animation:hover {
+    background-color: $dark-color;
+    color: $light-color;
+    padding: 24px 10px;
+  }
