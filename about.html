@@ -1,67 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Devil</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link id="favicon" rel="icon" href="images/favicon.png" type="image.png" sizes="16x16">
-
-</head>
-<body>
-
-  <header>
-    <a href="#" class="logo">Fahiim Emambocus</a>
-    <nav>
-      <ul>
-        <li><a href="/" class="hover-animation">Home</a></li>
-        <li><a href="#" class="hover-animation">About</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="grid-container">
-
-    <section class="hero">
-      <div class="container">
-        <div class="animate-header">
-          <h1>Front-End Developer</h1>
-        </div>
-        <div class="animate-body">
-          <p>Design. Innovate. Create.</p>
-          <a href="#" class="button discover">Discover</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="side-top">
-      <div class="container">
-        <div class="animate-header">
-          <h2>Profile</h2>
-        </div>
-        <div class="animate-body">
-          <p>I'm tired.</p>
-          <a href="#" class="button">Learn more</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="side-bottom">
-      <div class="container">
-        <div class="animate-header">
-          <h2>Discord</h2>
-        </div>
-        <div class="animate-body">
-          <p>Join the discord channel to discuss or for some gaming.</p>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-  <script src="js/main.js"></script>
-
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Fahiim | Portfolio</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link id="favicon" rel="icon" href="images/favicon.png" type="image.png" sizes="16x16">
+	</head>
+	<body>
+		<!-- GRID TEMPLATE -->
+		<!-- HEADER -->
+		<header>
+			<div class="header-grid-container">
+				<div class="top-bar">
+					<a href="#" class="logo">Fahiim Emambocus</a>
+					<nav class="nav-hover">
+						<ul>
+							<li><a href="/" class="hover-animation">Home</a></li>
+							<li><a href="#" class="hover-animation">About</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="main-grid-container">
+				<section class="header header-container">
+					<div class="hero">
+						<div class="grid-title">
+							<div class="animate-header">
+								<h1>Front-End Developer</h1>
+							</div>
+							<div class="animate-body">
+								<p class="slogan">
+									Design. Innovate. Create.
+								</p>
+								<a href="#anchor-point" class="button discover-js">Discover</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="row-paragraph para-container">
+					<!-- <div class="paragraph">
+						<h2>And the adventure starts...</h2>
+						<p>
+							Join the discord channel for some gaming.
+						</p>
+                    </div> -->
+                    <div class="graphic1">
+						<img src="images/programming.png" alt="Portfolio" class="img-size hover-image"/>
+					</div>
+					<div class="graphic2">
+						<img src="images/programming.png" alt="Portfolio" class="img-size hover-image"/>
+					</div>
+				</section>
+				<section class="row-benefits benefits-container">
+					<div class="attack">
+						<h2 id="anchor-point">Games I play...</h2>
+					</div>
+					<div class="image1">
+						<img src="images/battlefield3.jpg" alt="Portfolio" class="img-size hover-image"/>
+						<a href="https://www.ea.com/games/battlefield/battlefield-3?isLocalized=true" target="_blank" class="button">Learn More</a>
+					</div>
+					<div class="image2">
+						<img src="images/overwatch2.jpg" alt="Portfolio" class="img-size hover-image"/>
+						<a href="https://playoverwatch.com/en-gb/" target="_blank" class="button">Learn More</a>
+					</div>
+					<div class="image3">
+						<img src="images/fortnite.jpg" alt="Portfolio" class="img-size hover-image"/>
+						<a href="https://www.epicgames.com/fortnite/en-US/home" target="_blank" class="button">Learn More</a>
+					</div>
+				</section>
+			</div>
+		</main>
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-grid-container">
+				<div class="first-row-footer">
+					<ul class="icons">
+						<li>
+							<a href="https://github.com/iFahiim" target="_blank" class="icon"><img src="assets/github.png" alt="Social"/></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/SENPAIDEVIL/" target="_blank" class="icon"><img src="assets/facebook.png" alt="Social"/></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/i.devil.fahiim/" target="_blank" class="icon"><img src="assets/instagram.png" alt="Social"/></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/i_Fahiim" target="_blank" class="icon"><img src="assets/twitter.png" alt="Social"/></a>
+						</li>
+						<li>
+							<a href="mailto:fahiim@live.com" target="_blank" class="icon"><img src="assets/email.png" alt="Social"/></a>
+						</li>
+					</ul>
+				</div>
+				<div class="second-row-footer">
+					<ul class="copyright">
+						<li>&copy; Design: Fahiim</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
