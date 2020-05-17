@@ -35,8 +35,8 @@ body {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  -ms-grid-rows: 1fr 1fr auto;
-      grid-template-rows: 1fr 1fr auto;
+  -ms-grid-rows: 1fr auto auto;
+      grid-template-rows: 1fr auto auto;
       grid-template-areas: "header" "row-paragraph" "row-benefits";
 }
 
@@ -165,22 +165,23 @@ body {
   .para-container {
     display: -ms-grid;
     display: grid;
-    margin: 5em;
-    -ms-grid-columns: 50% auto;
-        grid-template-columns: 50% auto;
+    margin: 5em 5em 0 5em;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "paragraph graphic";
+    grid-gap: 2em;
+        grid-template-areas: "graphic1 graphic2";
   }
-  .para-container .paragraph {
+  .para-container .graphic1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: paragraph;
+    grid-area: graphic1;
   }
-  .para-container .graphic {
+  .para-container .graphic2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
-    grid-area: graphic;
+    grid-area: graphic2;
   }
   .benefits-container {
     display: -ms-grid;
@@ -188,8 +189,8 @@ body {
     margin: 5em;
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
-    -ms-grid-rows: 1fr auto;
-        grid-template-rows: 1fr auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
     grid-gap: 2em;
         grid-template-areas: ". attack ." "image1 image2 image3";
   }
@@ -306,6 +307,10 @@ body {
   width: 100%;
 }
 
+section {
+  margin: 0;
+}
+
 .icons, .copyright {
   list-style-type: none;
   display: -webkit-inline-box;
@@ -353,5 +358,17 @@ body::-webkit-scrollbar-button {
   background-color: #000000;
   color: #FFFFFF;
   padding: 24px 10px;
+}
+
+.hover-image {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hover-image:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
 /*# sourceMappingURL=main.css.map */
