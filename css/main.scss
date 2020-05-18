@@ -15,7 +15,7 @@ body {
     //display: none;
 }
 
-// GRID
+// GRID HOME
 
 .header-grid-container {
     display: grid;
@@ -31,8 +31,6 @@ body {
         grid-area: navigation;
     }
 }
-
-
 
 .main-grid-container {
     display: grid;
@@ -119,6 +117,28 @@ body {
         grid-area: second-row-footer;
         text-align: center;
         background: $primary-color;
+    }
+}
+
+
+// GRID CONTENT
+
+.main-content-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "header"
+        "form-container";
+    
+    .header {
+    grid-area: header;
+    }
+    .form-container {
+        grid-area: form-container;
+        margin: 10em;
+        width: 50%;
+        justify-self: center;
     }
 }
 
@@ -254,6 +274,11 @@ body {
             }
         }
 
+        .hero-content {
+            height: 50vh;
+            background-position: center;
+        }
+
         .side-bottom {
             background: $primary-color;
         }
@@ -265,6 +290,10 @@ body {
 
         .grid-title {
             padding: 25em 0 0 2em;
+        }
+
+        .grid-title-content {
+            padding: 8em 0 0 2em;
         }
 
 
@@ -370,3 +399,35 @@ body::-webkit-scrollbar-button {
 	filter: grayscale(0);
 }
 
+
+// FORM
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .input-field:focus {
+    border: 2px solid $dark-color;
+  }
+  
+  .form-button {
+    background-color: $dark-color;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .form-button:hover {
+    opacity: 1;
+  }
